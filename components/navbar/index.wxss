@@ -1,0 +1,24 @@
+/* components/aa/index.wxss */
+@import '../../assets/font/iconfont.wxss';
+.narbar-view{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-flow: row;
+    padding: 5px 0 10px;
+    width: 100%;
+    font-size: 12px;
+    border-top: 1px solid #ccc;
+}
+.list-item{
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+}
+.iconfont{
+    font-size: 20px;
+}
+.activeClass{
+    color: #0072ff;
+}

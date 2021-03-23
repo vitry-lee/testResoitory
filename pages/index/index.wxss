@@ -1,0 +1,10 @@
+/**index.wxss**/
+.create-assignment{
+    text-align: center;
+}
+.icontianjia1{
+    font-size: 30px;
+}
+.nav-bar-view{
+    width: 100%;
+}

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "narbar": "/components/navbar/index",
+    "taskTemp": "/pages/task/index",
+    "statiscalTemp": "/pages/statiscal/index",
+    "settingTemp": "/pages/setting/index"
+  }
+}

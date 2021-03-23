@@ -1,0 +1,64 @@
+<!--pages/task/index.wxml-->
+<view class="task-view">
+    <view 
+        wx:for="{{taskList}}"
+        wx:for-item="itemData"
+        wx:for-index="idx"
+        wx:key="key"
+        class="task-item">
+        <view class="degree-header-{{idx}} degree-header">
+            <text wx:if="{{itemData.status === 0}}">重要又紧急-优先解决</text>
+            <text wx:if="{{itemData.status === 1}}">重要不紧急-制定计划去做</text>
+            <text wx:if="{{itemData.status === 2}}">不重要但紧急-给别人做</text>
+            <text wx:if="{{itemData.status === 3}}">不重要不紧急-有空再说</text>
+        </view>
+        <view class="degree-content-{{idx}} degree-content">
+            <!-- 待办任务 -->
+            <view
+                wx:if="{{itemData.unfinished.length > 1}}"
+                class="unfinished-content">
+                <view class="content-header">
+                    <view class="icon iconfont icondaiban"></view>
+                    <text>待完成{{itemData.unfinished.length}}</text>
+                </view>
+                <view
+                    wx:for="{{itemData.unfinished}}"
+                    wx:for-item="childData01"
+                    wx:key="key"
+                    bindlongpress="unfinishPress"
+                    class="content-view">
+                    <checkbox-group
+                        bindchange="unfinishStatus">
+                        <checkbox 
+                            value="{{childData01.status}}" 
+                            checked="{{childData01.status}}"/>
+                    </checkbox-group>
+                    <text>{{childData01.title}}</text>                 
+                </view>
+            </view>
+            <!-- 已完成任务 -->
+            <view
+                wx:if="{{itemData.finished.length > 1}}"
+                class="finished-content">
+                <view class="content-header">
+                    <view class="icon iconfont iconyiwancheng1"></view>
+                    <text>已完成{{itemData.finished.length}}</text>
+                </view>
+                <view
+                    wx:for="{{itemData.finished}}"
+                    wx:for-item="childData02"
+                    wx:key="key"
+                    bindlongpress="finishPress"
+                    class="content-view">
+                    <checkbox-group
+                        bindchange="finishStatus">
+                        <checkbox
+                            value="{{childData02.status}}"
+                            checked="{{childData02.status}}"/>
+                    </checkbox-group>
+                    <text>{{childData02.title}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,13 @@
+<!--components/aa/index.wxml-->
+<view class="narbar-view">
+  <view
+    wx:for="{{listData}}"
+    wx:key="key"
+    bindtap="activeClick"
+    data-cur="{{item.cur}}"
+    style="width:{{(1/listData.length)*100}}%;"
+    class="list-item {{item.cur === active ? 'activeClass' : ''}}">
+    <icon class="icon iconfont {{item.icon}}"></icon>
+    <text>{{item.text}}</text>
+  </view>
+</view>

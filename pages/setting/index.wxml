@@ -1,0 +1,20 @@
+<!--pages/setting/index.wxml-->
+<view class="setting-view">
+    <view
+        wx:for="{{listData}}"
+        wx:for-item="item"
+        wx:for-index="idx"
+        wx:key="key"
+        data-item="{{item}}"
+        bindtap="changeClick"
+        class="list-menu">
+        <view
+            class="list-item">
+            <view class="left-view">
+                <icon class="icon iconfont {{item.iconLeft}}"></icon>
+                <text>{{item.value}}</text>
+            </view>
+            <icon class="icon iconfont {{item.iconRight}}"></icon>
+        </view>
+    </view>
+</view>

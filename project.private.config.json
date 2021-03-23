@@ -1,0 +1,30 @@
+{
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "任务添加",
+                    "pathName": "pages/create/task",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "设置中心",
+                    "pathName": "pages/setting/index",
+                    "query": "",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}

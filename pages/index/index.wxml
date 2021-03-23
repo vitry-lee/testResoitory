@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class="page-container">
+    <view wx:if="{{curTemp === 0}}" class="create-assignment">
+        <icon bindtap="createAssignment" class="icon iconfont icontianjia1"></icon>
+    </view>
+    <!-- 内容区域 -->
+    <view class="content-block">
+        <taskTemp wx:if="{{curTemp === 0}}"></taskTemp>
+        <statiscalTemp wx:if="{{curTemp === 1}}"></statiscalTemp>
+        <settingTemp wx:if="{{curTemp === 2}}"></settingTemp>
+    </view>
+    <!-- 底部导航 -->
+    <narbar
+        navBar="{{navBar}}"
+        bind:myevent="onMyEvent"
+        class="nav-bar-view">
+    </narbar>
+</view>

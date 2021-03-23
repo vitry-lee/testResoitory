@@ -1,0 +1,32 @@
+<!--pages/create/task.wxml-->
+<view class="assignmemt-view">
+    <view class="text-area">
+        <textarea placeholder="添加任务名称" value="{{content}}" bindinput="bindInput"></textarea>
+    </view>
+    <view class="status-list">
+        <view
+            wx:for="{{listStatus}}"
+            wx:key="key"
+            wx:for-index="idx"
+            data-activeStatus="{{item.value}}"
+            bindtap="activeStatus"
+            class="list-item list-item-{{idx}} {{curStatus === item.value ? 'activeStatus' : ' '}}">
+            {{item.title}}
+        </view>
+    </view>
+    <view class="time-part">
+        <text>时间</text>
+        <picker
+            class="picker" 
+            mode="date" 
+            value="{{date}}" 
+            start="2021-01-01" 
+            end="2030-01-01" 
+            bindchange="bindDateChange">
+            {{date}}
+        </picker>
+    </view>
+    <view bindtap="createBtn" class="create-btn">
+        创建
+    </view>
+</view>
