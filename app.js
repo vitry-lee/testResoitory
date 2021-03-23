@@ -7,8 +7,8 @@ App({
     wx.getSystemInfo({
       success: (res) => {
         let statusBarH = res.statusBarHeight,
-            navTop = menuBtnObj.top, // 胶囊按钮与顶部的距离
-            navH = statusBarH + menuBtnObj.height + (navTop - statusBarH)*2; //  导航高度
+          navTop = menuBtnObj.top, // 胶囊按钮与顶部的距离
+          navH = statusBarH + menuBtnObj.height + (navTop - statusBarH)*2; //  导航高度
         this.globalData.navH = navH;
         this.globalData.navTop = navTop;
         this.globalData.windowH = res.windowHeight;

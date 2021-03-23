@@ -1,5 +1,7 @@
 <!--pages/create/task.wxml-->
-<view class="assignmemt-view">
+<view class="assignmemt-view common-padding">
+    <!-- 头部 -->
+    <topbar></topbar>
     <view class="text-area">
         <textarea placeholder="添加任务名称" value="{{content}}" bindinput="bindInput"></textarea>
     </view>

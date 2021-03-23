@@ -6,7 +6,7 @@
     bindtap="activeClick"
     data-cur="{{item.cur}}"
     style="width:{{(1/listData.length)*100}}%;"
-    class="list-item {{item.cur === active ? 'activeClass' : ''}}">
+    class="list-item {{item.cur === curTemp ? 'activeClass' : ''}}">
     <icon class="icon iconfont {{item.icon}}"></icon>
     <text>{{item.text}}</text>
   </view>

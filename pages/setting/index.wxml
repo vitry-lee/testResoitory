@@ -1,5 +1,7 @@
 <!--pages/setting/index.wxml-->
-<view class="setting-view">
+<view class="setting-view common-padding">
+    <!-- 头部 -->
+    <topbar></topbar>
     <view
         wx:for="{{listData}}"
         wx:for-item="item"
@@ -17,4 +19,11 @@
             <icon class="icon iconfont {{item.iconRight}}"></icon>
         </view>
     </view>
+    <!-- 底部导航 -->
+    <narbar
+        navBar="{{navBar}}"
+        curTemp="{{curTemp}}"
+        bind:myevent="onMyEvent"
+        class="nav-bar-view">
+    </narbar>
 </view>

@@ -1,3 +1,6 @@
 /**app.wxss**/
 @import './assets/font/iconfont.wxss';
+.common-padding{
+    padding: 76px 10px 60px;
+}
 

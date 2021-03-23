@@ -1,12 +1,11 @@
 /* pages/setting/index.wxss */
 .setting-view{
-    padding: 10px;
     font-size: 14px;
 }
 .list-item{
     display: flex;
     justify-content: space-between;
-    line-height: 32px;
+    line-height: 38px;
     border-bottom: 1px solid #ccc;
 }
 .left-view .icon{

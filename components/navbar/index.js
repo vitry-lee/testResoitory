@@ -11,6 +11,9 @@ Component({
           listData: val_new
         });
       }
+    },
+    curTemp:{
+      type: Number
     }
   },
 

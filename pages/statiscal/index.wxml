@@ -1,1 +1,12 @@
 <!--pages/statiscal/index.wxml-->
+<view class="statiscal-view common-padding">
+    <!-- 头部 -->
+    <topbar></topbar>
+    <!-- 底部导航 -->
+    <narbar
+        navBar="{{navBar}}"
+        curTemp="{{curTemp}}"
+        bind:myevent="onMyEvent"
+        class="nav-bar-view">
+    </narbar>
+</view>

@@ -1,9 +1,12 @@
 // pages/setting/index.js
+import NarbarData from '../index/narbar.js';
 Page({
     /**
      * 页面的初始数据
      */
     data: {
+        curTemp: 2,
+        navBar: NarbarData,
         listData: [
             {
                 iconLeft: 'iconguanggao',
@@ -57,6 +60,21 @@ Page({
                 iconRight: 'iconarrow-right'
             }
         ]
+    },
+    // 子组件narbar回传数据
+    onMyEvent(data){
+        switch(Number(data.detail)){
+        case 0:
+            wx.redirectTo({
+                url: '/pages/index/index',
+            });
+            break;
+        case 1:
+            wx.redirectTo({
+                url: '/pages/statiscal/index',
+            })
+            break;
+        }
     },
     // 当前点击
     changeClick(e){

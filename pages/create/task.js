@@ -59,7 +59,7 @@ Page({
                 title: '任务创建成功',
                 duration: 2000,
                 success: res=>{
-                  wx.navigateTo({
+                  wx.redirectTo({
                       url: '/pages/index/index',
                     });
                 }

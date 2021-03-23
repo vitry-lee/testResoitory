@@ -1,6 +1,5 @@
 /* pages/create/task.wxss */
 .assignmemt-view{
-    padding: 10px;
     font-size: 14px;
 }
 .text-area{

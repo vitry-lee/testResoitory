@@ -1,0 +1,5 @@
+<!--components/topBar/index.wxml-->
+<view
+    style="height: {{navH}}px;"
+    class="top-bar-view">
+</view>
